@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Start saving now and improve the use of your money">
+      <meta name="author" content="Joan Andoni González Rioz">
+
+      <title>Savings App</title>
+
+      <!--NORMALIZATION-->
+      <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+      <link rel="stylesheet" type="text/css" href="css/SuperResete.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+
+      <!--COUNTER-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script>
+          jQuery(document).ready(function( $ ) {
+              $('.counter').counterUp({
+                  delay: 10,
+                  time: 1000
+              });
+          });
+      </script>
+
+  </head>
+
+  <body>
+
+      <section id="home" class="header flex-container-header">
+        <div>
+          <h1 class="text-header">Savings App</h1>
+          <h2 class="oferta-h2" style="font-size: 35px; font-family: 'RalewayRegular'">The only way that you will invest safely</h2>
+        </div>
+      </section>
+
+    <!-- OFERTA -->
+
+      <section>
+        <div id="preescolar" class="flex-container-oferta">
+          <div class="header-oferta">
+            <h2 class="oferta-h2">See how it works</h2>
+            <h3 class="oferta-h3">This is how we can help you</h3>
+            <div class="video">
+              <br>
+              <iframe width="1000" height="500" src="https://www.youtube.com/embed/TA3lSs9L8dg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+            </div>
+          </div>
+        </div>
+
+        <div id="stats" class="flex-container-count">
+          <div class="box-count">
+            <div class="count-element">
+              <div class="count-text">
+                <ion-icon name="md-analytics"></ion-icon>
+                <h3><span class="counter">1000</span> +</h3>
+                <p>Persons already improving</p>
+              </div>
+            </div>
+
+            <div class="count-element">
+              <div class="count-text">
+                <ion-icon name="logo-usd"></ion-icon>
+                <h3><span class="counter"> 53400</span> +</h3>
+                <p>Total money generated</p>
+              </div>
+            </div>
+
+            <div class="count-element">
+              <div class="count-text">
+                <ion-icon name="ios-card"></ion-icon>
+                <h3><span class="counter">1300</span> +</h3>
+                <p>People that left the use of a card</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- CONTACTO -->
+
+      <section id="contacto" class="flex-container-contacto">
+        <div class="flex-box-contacto">
+          <div class="identation-text">
+            <h2 class="title-contacto">Get more information</h2>
+            <p class="text-highlighted">
+              Start saving now
+            <p class="text-contacto">
+              We are going to provide you all the information so you can start saving now,
+              you just have to sign up your contact information and we will send you all the news.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex-box-contacto-b">
+          <form method="POST" action="https://formspree.io/gal31416@gmail.com">
+            <label for="fname">Name</label>
+              <br>
+            <input type="text" id="fname" name="firstname" placeholder="Name..">
+              <br>
+            <label for="femail">Email</label>
+              <br>
+            <input type="email" id="femail" name="email" placeholder="Mail..">
+              <br>
+            <label for="fnivel">¿Where did you hear about us?</label>
+              <br>
+            <select id="fnivel" name="source" >
+              <option value="general">Choose an option from above...</option>
+              <option value="friend">Friend</option>
+              <option value="school">School</option>
+              <option value="facebook">Facebook</option>
+              <option value="instagram">Instagram</option>
+              <option value="twitter">Twitter</option>
+            </select>
+              <br>
+            <input type="submit" value="Send">
+          </form>
+        </div>
+      </section>
+
+    <!-- FOOTER -->
+
+      <div class="flex-container-footer" >
+        <div class="footer-box-content">
+
+          <div class="footer-header">
+            <p style="font-family:RalewaySemiBold; font-size:35px; margin-top: 9%;">"Save money that's the real solution"<br></p>
+            <p>Feel free to contact us in our social media<br><br></p>
+          </div>
+
+          <div class="footer-socials">
+              <div class="social"><a target="_blank" href="https://www.facebook.com/SavingsAppTec/"><ion-icon name="logo-facebook"></ion-icon></a></div>
+              <div class="social"><a target="_blank" href="https://twitter.com/"><ion-icon name="logo-twitter"></ion-icon></a></div>
+              <div class="social"><a target="_blank" href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a></div>
+          </div>
+        </div>
+
+        <div class="box-copyright">
+          <span>© 2018 <a href="#home">Savings App</a>, All Rights Reserved.</span>
+        </div>
+      </div>
+
+    <!-- IMPORT OF THE JS -->
+      <script type="text/javascript" src="js/animation.js"></script>
+
+    <!-- IMPORT OF THE ICONS -->
+      <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+
+    <!-- AUTO-SCROLLDOWN -->
+      <script>
+          // Select all links with hashes
+          $('a[href*="#"]')
+          // Remove links that don't actually link to anything
+          .not('[href="#"]')
+          .not('[href="#0"]')
+          .click(function(event) {
+          // On-page links
+          if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
+            location.hostname == this.hostname
+          ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+              // Only prevent default if animation is actually gonna happen
+              event.preventDefault();
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000, function() {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                  return false;
+                } else {
+                  $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                  $target.focus(); // Set focus again
+                  };
+                });
+              }
+            }
+          });
+      </script>
+
+    <!-- IMPORT FOR THE COUNTER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+
+    </body>
+</html>
